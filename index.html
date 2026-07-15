@@ -145,11 +145,14 @@
 
     .nav-resume {
       padding: 10px 15px;
-      border: 1px solid var(--line);
+      border: 1px solid var(--blue);
       border-radius: 999px;
-      background: var(--surface);
-      color: var(--ink) !important;
+      background: var(--blue);
+      color: white !important;
+      box-shadow: 0 8px 20px rgba(49, 87, 213, 0.2);
     }
+
+    .nav-resume:hover { background: var(--blue-dark); color: white !important; }
 
     .hero {
       display: grid;
@@ -230,6 +233,27 @@
     .button-secondary {
       border-color: var(--line);
       background: var(--surface);
+    }
+
+    .button-resume {
+      border-color: #c7dc5c;
+      background: var(--lime);
+      color: var(--ink);
+      box-shadow: 0 12px 28px rgba(124, 145, 31, 0.24);
+    }
+
+    .button-resume:hover {
+      background: #e8fa8c;
+      box-shadow: 0 16px 34px rgba(124, 145, 31, 0.3);
+    }
+
+    .resume-format {
+      padding: 5px 7px;
+      border-radius: 6px;
+      background: var(--ink);
+      color: white;
+      font: 800 9px/1 var(--mono);
+      letter-spacing: 0.06em;
     }
 
     .availability-card {
@@ -543,7 +567,7 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
-        <a class="nav-resume" href="matthew-choo-resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+        <a class="nav-resume" href="matthew-choo-resume.pdf" target="_blank" rel="noopener">View Resume PDF</a>
       </nav>
     </div>
   </header>
@@ -555,8 +579,8 @@
         <h1>Build it. Test it. <span>Make it better.</span></h1>
         <p class="hero-summary">I am Matthew, a Mechanical Engineering student at the University of Western Ontario with experience in pharmaceutical process systems, vehicle design, CAD, analysis, and hands-on prototyping.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore projects <span aria-hidden="true">&darr;</span></a>
-          <a class="button button-secondary" href="matthew-choo-resume.pdf" target="_blank" rel="noopener">View resume PDF <span aria-hidden="true">&#8599;</span></a>
+          <a class="button button-resume" href="matthew-choo-resume.pdf" target="_blank" rel="noopener"><span class="resume-format">PDF</span> View my resume <span aria-hidden="true">&#8599;</span></a>
+          <a class="button button-secondary" href="#projects">Explore projects <span aria-hidden="true">&darr;</span></a>
         </div>
       </div>
 
