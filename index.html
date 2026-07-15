@@ -73,12 +73,33 @@
       min-height: 42px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
-      text-align: center;
+      justify-content: space-between;
+      gap: 24px;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.01em;
+    }
+
+    .announcement-status,
+    .top-contact {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-contact { gap: 18px; }
+
+    .top-contact a {
+      color: #d0d5dd;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .top-contact a:hover { color: white; text-decoration: underline; }
+
+    .top-contact .linkedin-link {
+      color: var(--lime);
+      font-weight: 800;
     }
 
     .announcement-dot {
@@ -524,7 +545,14 @@
 
     @media (max-width: 700px) {
       .shell { width: min(var(--max), calc(100% - 28px)); }
-      .announcement-inner { padding-block: 10px; }
+      .announcement-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 7px;
+        padding-block: 10px;
+        text-align: center;
+      }
+      .top-contact { flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
       .nav-links a:not(.nav-resume) { display: none; }
       .brand span span { display: none; }
       .hero { padding-block: 72px; }
@@ -552,8 +580,14 @@
 
   <div class="announcement">
     <div class="shell announcement-inner">
-      <span class="announcement-dot" aria-hidden="true"></span>
-      Seeking a 16-month engineering co-op beginning Summer 2027
+      <div class="announcement-status">
+        <span class="announcement-dot" aria-hidden="true"></span>
+        <span>Seeking a 16-month engineering co-op beginning Summer 2027</span>
+      </div>
+      <nav class="top-contact" aria-label="Contact links">
+        <a href="mailto:mmakchoo@gmail.com">mmakchoo@gmail.com</a>
+        <a class="linkedin-link" href="https://www.linkedin.com/in/matthew-choo" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+      </nav>
     </div>
   </div>
 
